@@ -43,5 +43,6 @@ function createBoxes(amount) {
 
 function destroyBoxes(event) {
   divBoxes.innerHTML = '';
+  input.value = '';
 }
 
