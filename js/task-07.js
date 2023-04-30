@@ -10,6 +10,7 @@ const input = document.querySelector('#font-size-control');
 const spanTxt = document.querySelector('#text');
 
 input.addEventListener('input', onChangeFont);
+spanTxt.style.fontSize = '50px';
 
 function onChangeFont(event) {
     spanTxt.style.fontSize = `${event.currentTarget.value}px`;
