@@ -15,9 +15,16 @@ function handleSubmit(event) {
     const {
         elements: { email, password }
     } = event.currentTarget;
+
     if (email.value === '' || password.value === '') {
         return alert('Заповніть всі поля, будь ласка!');
     }
-    console.log(`Email: ${email.value}, Password: ${password.value}`);
+
+    const formData = new FormData(event.currentTarget);
+
+    formData.forEach((value, key) => {
+      console.log('Email:', email.value, 'Password:', password.value);
+})
+    
     event.currentTarget.reset();
 }
