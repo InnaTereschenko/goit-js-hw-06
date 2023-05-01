@@ -22,11 +22,13 @@ function handleSubmit(event) {
 
     const formData = new FormData(event.currentTarget);
 
-    formData.forEach((value, key) => {
-        
-        console.log(key, value);
-        
-})
-    
+    const data = {};
+
+    for (const [key, value] of formData) {
+        data[key] = value;
+    }
+
+    console.log(data);
+
     event.currentTarget.reset();
 }
