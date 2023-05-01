@@ -23,7 +23,9 @@ function handleSubmit(event) {
     const formData = new FormData(event.currentTarget);
 
     formData.forEach((value, key) => {
-      console.log('Email:', email.value, 'Password:', password.value);
+        
+        console.log(key, value);
+        
 })
     
     event.currentTarget.reset();
